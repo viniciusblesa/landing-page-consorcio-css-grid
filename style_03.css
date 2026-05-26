@@ -1,0 +1,246 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* BODY */
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        to bottom right,
+        #000000,
+        #2f0808
+    );
+    color: white;
+}
+/* GRID LAYOUT */
+.grid-layout{
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+    grid-template-columns:
+    220px
+    1fr
+    300px;
+    min-height: 100vh;
+}
+/* HEADER */
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background: rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.logo h1{
+    color: #ff2e63;
+}
+/* MENU */
+.menu{
+    grid-area: nav;
+    padding: 30px 20px;
+    background: rgba(255,255,255,0.03);
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.menu a:hover{
+    color: #ff2e63;
+}
+/* MAIN */
+.main-content{
+    grid-area: main;
+    padding: 40px;
+}
+/* SECTION */
+.section{
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+}
+/* TITLES */
+.section h2{
+    color: #ff2e63;
+    margin-bottom: 20px;
+}
+.section p{
+    line-height: 1.7;
+}
+/* HERO */
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+.hero img{
+    width: 100%;
+    border-radius: 20px;
+}
+/* BUTTON */
+button{
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #ff2e63;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background: #ff4d7d;
+    transform: scale(1.03);
+}
+/* CARDS */
+.cards{
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+}
+.card{
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.card:hover{
+    transform: translateY(-5px);
+}
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+/* VANTAGENS */
+.vantagens-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    text-align: center;
+}
+.vantagens-grid i{
+    font-size: 2rem;
+    color: #ff2e63;
+    margin-bottom: 10px;
+}
+/* DEPOIMENTOS */
+.depoimentos{
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+.depoimento{
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+}
+/* FORM */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input,
+textarea{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+}
+textarea{
+    min-height: 120px;
+    resize: none;
+}
+/* SIDEBAR */
+.sidebar{
+    grid-area: aside;
+    padding: 20px;
+    margin: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    align-self: start;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+.sidebar h2{
+    color: #ff2e63;
+    margin-bottom: 20px;
+}
+.sidebar img{
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.sidebar ul{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.sidebar li{
+    margin-bottom: 10px;
+}
+/* FOOTER */
+.footer{
+    grid-area: footer;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+/* RESPONSIVO */
+@media(max-width: 768px){
+    .grid-layout{
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+        grid-template-columns: 1fr;
+    }
+    .hero{
+        grid-template-columns: 1fr;
+    }
+    .vantagens-grid{
+        grid-template-columns: 1fr;
+    }
+    .menu ul{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .menu{
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .sidebar{
+        position: static;
+        margin: 20px;
+    }
+}
