@@ -2,6 +2,8 @@
 
 Landing page responsiva para uma empresa de consórcios automotivos.
 
+---
+
 ## Tecnologias
 
 - HTML5 Semântico
@@ -10,6 +12,8 @@ Landing page responsiva para uma empresa de consórcios automotivos.
 - Flexbox
 - Media Queries
 - Font Awesome
+
+---
 
 ## Recursos
 
@@ -23,6 +27,31 @@ Landing page responsiva para uma empresa de consórcios automotivos.
 - Formulário de contato
 - Grid Template Areas
 
+---
+
 ## Objetivo
 
-Praticar desenvolvimento front-end moderno utilizando Grid Layout e responsividade.
+Praticar desenvolvimento front-end moderno utilizando Grid Layout, Flexbox e responsividade.
+
+---
+
+## Inspiração
+
+Este projeto foi desenvolvido como prática de front-end moderno, inspirado nos aprendizados adquiridos durante o bootcamp Fullstack da SoulCode Academy, patrocinado pela Accenture.
+
+---
+
+## Estrutura do Projeto
+
+```bash
+📁 projeto
+ ├── index.html
+ ├── style_03.css
+ └── README.md
+```
+
+---
+
+## Autor
+
+Desenvolvido por Vinícius Blesa.
